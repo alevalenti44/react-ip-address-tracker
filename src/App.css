@@ -1,0 +1,145 @@
+:root {
+  --dark-gray: hsl(0, 0%, 17%);
+  --gray: hsl(0, 0%, 59%);
+}
+
+.p-header {
+  height: 240px;
+  padding-top: 2rem;
+  background-image: url('images/pattern-bg-desktop.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+button {
+  background-color: black;
+  color: white;
+  height: 100%;
+  display: inline-block;
+  padding: 20px 20px;
+  border-radius: 0px 10px 10px 0px;
+  border: 1px solid transparent;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--dark-gray);
+}
+
+.c-ip-info__container {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 999;
+  top: -60px;
+  border-radius: 16px;
+  width: fit-content;
+  padding: 2rem 1rem;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: 76%;
+}
+
+.c-ip-info__box:not(:last-child) {
+  border-right: 1px solid lightgray;
+}
+
+.c-ip-info__box {
+  flex-grow: 1;
+  padding: 1rem 1rem 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.c-ip-info__title {
+  color: var(--gray);
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.c-ip-info__value {
+  color: var(--dark-gray);
+  font-weight: 500;
+  font-size: 24px;
+  margin-top: 1rem;
+}
+
+.c-ip-info__input {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.c-ip-info__input input {
+  padding: 1rem;
+  border: none;
+  width: 430px;
+  border-radius: 10px 0px 0px 10px;
+  display: inline-block;
+  padding: 18.5px 15px;
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+}
+
+.c-ip-info__input input:hover {
+  cursor: pointer;
+}
+
+footer {
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+  padding: 2rem 0rem;
+  width: 100%;
+  text-align: center;
+}
+
+.p-container {
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+}
+
+.c-map__section {
+  flex-grow: 1;
+  position: relative;
+}
+
+@media (max-width:768px) {
+  .c-ip-info__box:not(:last-child) {
+    border: none;
+  }
+
+  .c-ip-info__container {
+    text-align: center;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+}
+
+@media (max-width:767px) {
+  .c-ip-info__input {
+    width: 76%;
+  }
+  .c-ip-info__box {
+    padding: 0.5rem 2rem 0.5rem 2rem;
+  }
+  .c-ip-info__input {
+    display: flex;
+  }
+}
